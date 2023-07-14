@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   card: {
     display: 'flex',
     fontSize: '2em',
-    height: '31vh',
+    height: '29vh',
     width: 'auto',
     background: 'white',
     color: 'black',
@@ -56,7 +56,7 @@ const useStyles = makeStyles({
   cardImage: {
     width: '100%',
     height: '100%',
-    objectFit: 'contain',
+    objectFit: 'fill'
   },
   hiddenDiv: {
     position: 'absolute',
