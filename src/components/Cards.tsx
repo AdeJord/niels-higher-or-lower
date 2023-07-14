@@ -1,0 +1,63 @@
+const cards: Card[] = [
+    { id: 1, name: 'Ace of Spades', imageUrl: '/images/ace_of_spades.png' },
+    { id: 2, name: 'Two of Spades', imageUrl: '/images/two_of_spades.png' },
+    { id: 3, name: 'Three of Spades', imageUrl: '/images/three_of_spades.png' },
+    { id: 4, name: 'Four of Spades', imageUrl: '/images/four_of_spades.png' },
+    { id: 5, name: 'Five of Spades', imageUrl: '/images/five_of_spades.png' },
+    { id: 6, name: 'Six of Spades', imageUrl: '/images/six_of_spades.png' },
+    { id: 7, name: 'Seven of Spades', imageUrl: '/images/seven_of_spades.png' },
+    { id: 8, name: 'Eight of Spades', imageUrl: '/images/eight_of_spades.png' },
+    { id: 9, name: 'Nine of Spades', imageUrl: '/images/nine_of_spades.png' },
+    { id: 10, name: 'Ten of Spades', imageUrl: '/images/ten_of_spades.png' },
+    { id: 11, name: 'Jack of Spades', imageUrl: '/images/jack_of_spades.png' },
+    { id: 12, name: 'Queen of Spades', imageUrl: '/images/queen_of_spades.png' },
+    { id: 13, name: 'King of Spades', imageUrl: '/images/king_of_spades.png' },
+    { id: 14, name: 'Ace of Hearts', imageUrl: '/images/ace_of_hearts.png' },
+    { id: 15, name: 'Two of Hearts', imageUrl: '/images/two_of_hearts.png' },
+    { id: 16, name: 'Three of Hearts', imageUrl: '/images/three_of_hearts.png' },
+    { id: 17, name: 'Four of Hearts', imageUrl: '/images/four_of_hearts.png' },
+    { id: 18, name: 'Five of Hearts', imageUrl: '/images/five_of_hearts.png' },
+    { id: 19, name: 'Six of Hearts', imageUrl: '/images/six_of_hearts.png' },
+    { id: 20, name: 'Seven of Hearts', imageUrl: '/images/seven_of_hearts.png' },
+    { id: 21, name: 'Eight of Hearts', imageUrl: '/images/eight_of_hearts.png' },
+    { id: 22, name: 'Nine of Hearts', imageUrl: '/images/nine_of_hearts.png' },
+    { id: 23, name: 'Ten of Hearts', imageUrl: '/images/ten_of_hearts.png' },
+    { id: 24, name: 'Jack of Hearts', imageUrl: '/images/jack_of_hearts.png' },
+    { id: 25, name: 'Queen of Hearts', imageUrl: '/images/queen_of_hearts.png' },
+    { id: 26, name: 'King of Hearts', imageUrl: '/images/king_of_hearts.png' },
+    { id: 27, name: 'Ace of Diamonds', imageUrl: '/images/ace_of_diamonds.png' },
+    { id: 28, name: 'Two of Diamonds', imageUrl: '/images/two_of_diamonds.png' },
+    { id: 29, name: 'Three of Diamonds', imageUrl: '/images/three_of_diamonds.png' },
+    { id: 30, name: 'Four of Diamonds', imageUrl: '/images/four_of_diamonds.png' },
+    { id: 31, name: 'Five of Diamonds', imageUrl: '/images/five_of_diamonds.png' },
+    { id: 32, name: 'Six of Diamonds', imageUrl: '/images/six_of_diamonds.png' },
+    { id: 33, name: 'Seven of Diamonds', imageUrl: '/images/seven_of_diamonds.png' },
+    { id: 34, name: 'Eight of Diamonds', imageUrl: '/images/eight_of_diamonds.png' },
+    { id: 35, name: 'Nine of Diamonds', imageUrl: '/images/nine_of_diamonds.png' },
+    { id: 36, name: 'Ten of Diamonds', imageUrl: '/images/ten_of_diamonds.png' },
+    { id: 37, name: 'Jack of Diamonds', imageUrl: '/images/jack_of_diamonds.png' },
+    { id: 38, name: 'Queen of Diamonds', imageUrl: '/images/queen_of_diamonds.png' },
+    { id: 39, name: 'King of Diamonds', imageUrl: '/images/king_of_diamonds.png' },
+    { id: 40, name: 'Ace of Clubs', imageUrl: '/images/ace_of_clubs.png' },
+    { id: 41, name: 'Two of Clubs', imageUrl: '/images/two_of_clubs.png' },
+    { id: 42, name: 'Three of Clubs', imageUrl: '/images/three_of_clubs.png' },
+    { id: 43, name: 'Four of Clubs', imageUrl: '/images/four_of_clubs.png' },
+    { id: 44, name: 'Five of Clubs', imageUrl: '/images/five_of_clubs.png' },
+    { id: 45, name: 'Six of Clubs', imageUrl: '/images/six_of_clubs.png' },
+    { id: 46, name: 'Seven of Clubs', imageUrl: '/images/seven_of_clubs.png' },
+    { id: 47, name: 'Eight of Clubs', imageUrl: '/images/eight_of_clubs.png' },
+    { id: 48, name: 'Nine of Clubs', imageUrl: '/images/nine_of_clubs.png' },
+    { id: 49, name: 'Ten of Clubs', imageUrl: '/images/ten_of_clubs.png' },
+    { id: 50, name: 'Jack of Clubs', imageUrl: '/images/jack_of_clubs.png' },
+    { id: 51, name: 'Queen of Clubs', imageUrl: '/images/queen_of_clubs.png' },
+    { id: 52, name: 'King of Clubs', imageUrl: '/images/king_of_clubs.png' },
+  ];
+  
+  interface Card {
+    id: number;
+    name: string;
+    imageUrl: string;
+  }
+  
+  
+  export default cards
