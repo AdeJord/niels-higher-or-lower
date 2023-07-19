@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import getCardImageUrl from './components/GetCardUrl';
 import './App.css';
 import { makeStyles } from '@mui/styles';
@@ -65,12 +65,39 @@ const useStyles = makeStyles({
     width: '50vw',
     height: '35vh',
   },
+  passwordInput: {
+    height: '30px',
+    width: '200px',
+    fontSize: '20px',
+    textAlign: 'center'
+  }
 });
 
 function App() {
   const [cards, setCards] = useState<number[]>([]);
   const [clickCount, setClickCount] = useState(0);
   const [cardValues, setCardValues] = useState<number[]>([0, 0, 0, 0, 0, 0]);
+  const [password, setPassword] = useState('')
+  const [auth, setAuth] = useState(false)
+  const passwordRef = useRef<HTMLInputElement>(null);
+
+
+  const passwordInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const passwordSubmit = () => {
+    // check entered password hash is the same as hashedPassword
+    console.log(password)
+    if (password === 'N13l02') {
+      setAuth(true)
+    } else {
+      alert('NOPE TRY AGAIN')
+      //clear what has been entered for password
+      if (passwordRef.current) {
+        passwordRef.current.value = ''
+      }
+    }}
 
   useEffect(() => {
     dealCards();
@@ -110,29 +137,42 @@ function App() {
 
   const classes = useStyles();
 
-  return (
-    <div className={classes.root}>
-      <div className={classes.headerContainer}>
-        {/* <div className={classes.header}>Higher Or Lower</div> */}
-        <div className={classes.hiddenDiv} onClick={resetHandler} />
+  if (auth) {
+
+    return (
+      <div className={classes.root}>
+        <div className={classes.headerContainer}>
+          {/* <div className={classes.header}>Higher Or Lower</div> */}
+          <div className={classes.hiddenDiv} onClick={resetHandler} />
+        </div>
+        <div className={classes.container} onClick={clickHandler}>
+          {cardValues.map((cardValue, index) => (
+            <div key={index} className={classes.card}>
+              {cardValue ? (
+                <img
+                  src={getCardImageUrl(cardValue)}
+                  alt={`Card ${index + 1}`}
+                  className={classes.cardImage}
+                />
+              ) : (
+                <img className={classes.cardImage} src="./images/back.png" alt="back" />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-      <div className={classes.container} onClick={clickHandler}>
-        {cardValues.map((cardValue, index) => (
-          <div key={index} className={classes.card}>
-            {cardValue ? (
-              <img
-                src={getCardImageUrl(cardValue)}
-                alt={`Card ${index + 1}`}
-                className={classes.cardImage}
-              />
-            ) : (
-              <img className={classes.cardImage} src="./images/back.png" alt="back" />
-            )}
-          </div>
-        ))}
+    );
+  } else {
+
+    return (
+      <div className={classes.root}>
+        <h2> Enter Password </h2>
+        <input type='password' onChange={passwordInput} className={classes.passwordInput} ref={passwordRef}></input>
+        <button type='button' onClick={passwordSubmit} className={classes.passwordInput}>Submit</button>
       </div>
-    </div>
-  );
+
+    )
+  }
 }
 
 export default App;
