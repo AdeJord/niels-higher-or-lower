@@ -3,6 +3,7 @@ import getCardImageUrl from './components/GetCardUrl';
 import './App.css';
 import { makeStyles } from '@mui/styles';
 
+
 const useStyles = makeStyles({
   root: {
     background: 'green',
@@ -92,7 +93,7 @@ function App() {
     if (password === 'N13l02') {
       setAuth(true)
     } else {
-      alert('NOPE TRY AGAIN')
+      alert('Incorrect Password Entered, Try again')
       //clear what has been entered for password
       if (passwordRef.current) {
         passwordRef.current.value = ''
